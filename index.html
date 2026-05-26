@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Estimations Star Ac - Saison 14</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader" role="status" aria-live="polite">
+      <div class="loader__brand"><span>Estimations</span> Star Ac</div>
+      <div class="loader__spinner" aria-hidden="true"></div>
+      <p>Chargement des estimations...</p>
+    </div>
+
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand" href="#" aria-label="Accueil Estimations Star Ac">
+          <span>Estimations</span> Star Ac
+        </a>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="home-hero" aria-labelledby="home-title">
+        <div class="home-hero__content">
+          <p class="kicker">Site fan non officiel</p>
+          <h1 id="home-title">Estimations Star Ac</h1>
+          <p>
+            Votez pour vos candidats preferes et suivez les tendances en direct
+            dans une ambiance premium TV.
+          </p>
+          <div class="hero-actions">
+            <a class="hero-button hero-button--gold" href="#polls-title">Voir les estimations</a>
+            <a class="hero-button" href="#vote-form">Voter maintenant</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="polls-title">
+        <h1 class="section-title" id="polls-title"><span></span>Estimations</h1>
+
+        <div class="poll-row">
+          <article class="poll-card poll-card--main">
+            <div class="poll-card__art poll-card__art--stage"></div>
+            <div class="poll-card__content">
+              <h2>Qui voulez-vous voir gagner la Star Academy ?</h2>
+              <div class="tags">
+                <span class="tag tag--open">Ouvert</span>
+                <span class="tag">Saison 14</span>
+              </div>
+
+              <form class="vote-form" id="vote-form">
+                <label>
+                  Candidat
+                  <select id="candidate-select" name="candidate"></select>
+                </label>
+                <button class="primary-button" id="vote-button" type="submit">Voter</button>
+              </form>
+
+              <p class="vote-message" id="vote-message">Un vote par appareil est autorise.</p>
+              <button class="secondary-button" type="button" onclick="document.querySelector('#results').scrollIntoView({ behavior: 'smooth' })">Resultats</button>
+            </div>
+          </article>
+
+          <article class="poll-card">
+            <div class="poll-card__art poll-card__art--lights"></div>
+            <div class="poll-card__content">
+              <h2>Quel candidat a fait la meilleure prestation ?</h2>
+              <div class="tags">
+                <span class="tag tag--closed">Bientot</span>
+                <span class="tag">Prime</span>
+              </div>
+              <button class="primary-button" type="button" disabled>Voter</button>
+              <button class="secondary-button" type="button">Resultats</button>
+            </div>
+          </article>
+
+          <article class="poll-card">
+            <div class="poll-card__art poll-card__art--gold"></div>
+            <div class="poll-card__content">
+              <h2>Qui merite d'aller en finale ?</h2>
+              <div class="tags">
+                <span class="tag tag--closed">Bientot</span>
+                <span class="tag">Finale</span>
+              </div>
+              <button class="primary-button" type="button" disabled>Voter</button>
+              <button class="secondary-button" type="button">Resultats</button>
+            </div>
+          </article>
+
+          <article class="poll-card">
+            <div class="poll-card__art poll-card__art--music"></div>
+            <div class="poll-card__content">
+              <h2>Quel duo vous a le plus marque ?</h2>
+              <div class="tags">
+                <span class="tag tag--closed">Bientot</span>
+                <span class="tag">Duo</span>
+              </div>
+              <button class="primary-button" type="button" disabled>Voter</button>
+              <button class="secondary-button" type="button">Resultats</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="how-title">
+        <h2 class="section-title" id="how-title"><span></span>Comment ca marche ?</h2>
+        <div class="steps-grid">
+          <article class="info-card">
+            <span class="step-number">1</span>
+            <h3>Choisissez votre candidat</h3>
+            <p>Selectionnez le candidat que vous voulez soutenir dans l'estimation.</p>
+          </article>
+          <article class="info-card">
+            <span class="step-number">2</span>
+            <h3>Votez une seule fois</h3>
+            <p>Le site limite le vote par appareil et par adresse IP autant que possible.</p>
+          </article>
+          <article class="info-card">
+            <span class="step-number">3</span>
+            <h3>Consultez les resultats</h3>
+            <p>Suivez le total, le classement et les pourcentages en direct.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="trends-title">
+        <h2 class="section-title" id="trends-title"><span></span>Dernieres tendances</h2>
+        <div class="trends-grid">
+          <article class="trend-card">
+            <span>Candidat le plus populaire</span>
+            <strong id="trend-leader">-</strong>
+          </article>
+          <article class="trend-card">
+            <span>Vote le plus serre</span>
+            <strong id="trend-gap">-</strong>
+          </article>
+          <article class="trend-card">
+            <span>Nombre total de votes</span>
+            <strong id="trend-total">0</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section results-section" id="results" aria-labelledby="results-title">
+        <h2 class="section-title" id="results-title"><span></span>Resultats en direct</h2>
+
+        <div class="results-grid">
+          <article class="results-card">
+            <div class="summary">
+              <div>
+                <span class="summary__value" id="total-votes">0</span>
+                <span class="summary__label">votes</span>
+              </div>
+              <div>
+                <span class="summary__value" id="leader-name">-</span>
+                <span class="summary__label">en tete</span>
+              </div>
+            </div>
+            <div class="ranking" id="ranking"></div>
+            <p class="note" id="prediction-note">Les premiers votes permettront de lancer une estimation.</p>
+          </article>
+
+          <aside class="results-card contestants-card">
+            <h3>Candidats</h3>
+            <div class="contestant-list" id="contestant-list"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="contact-title">
+        <h2 class="section-title" id="contact-title"><span></span>Contact</h2>
+        <form class="contact-form" id="contact-form">
+          <label>
+            Nom
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="primary-button" type="submit">Envoyer</button>
+          <p class="vote-message" id="contact-message">Le formulaire est pret pour recevoir vos messages.</p>
+        </form>
+      </section>
+
+      <section class="section" aria-labelledby="news-title">
+        <h2 class="section-title" id="news-title"><span></span>Les actus</h2>
+
+        <div class="news-row">
+          <article class="news-card news-card--one">
+            <span class="tag tag--open">Star Academy</span>
+            <h3>Le classement bouge apres les derniers votes</h3>
+          </article>
+          <article class="news-card news-card--two">
+            <span class="tag">Prime</span>
+            <h3>Les prestations qui font parler les fans</h3>
+          </article>
+          <article class="news-card news-card--three">
+            <span class="tag">Tour 2026</span>
+            <h3>La tournee continue de faire vibrer le public</h3>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Estimations Star Ac est un site fan non officiel. Il n'est pas affilie a
+        Star Academy, TF1, Endemol France ou DMLSTV.
+      </p>
+      <nav aria-label="Liens legaux">
+        <a href="conditions.html">Conditions d'utilisation</a>
+        <a href="confidentialite.html">Politique de confidentialite</a>
+        <a href="mentions-legales.html">Mentions legales</a>
+      </nav>
+    </footer>
+
+    <nav class="bottom-nav" aria-label="Navigation">
+      <a href="#" aria-current="page">Accueil</a>
+      <a href="#polls-title">Estimations</a>
+      <a href="#results">Resultats</a>
+    </nav>
+
+    <script src="script.js"></script>
+  </body>
+</html>

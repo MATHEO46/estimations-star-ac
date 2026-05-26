@@ -1,0 +1,13 @@
+{
+  "name": "estimations-star-ac",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site public d'estimations et de votes pour Star Academy Saison 14.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: estimations-star-ac
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: npm start

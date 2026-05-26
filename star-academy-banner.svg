@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-label="Banniere Star Academy Tour 2026">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1a0702"/>
+      <stop offset="0.46" stop-color="#3a1707"/>
+      <stop offset="1" stop-color="#090403"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#7a3a08"/>
+      <stop offset="0.18" stop-color="#ffd36a"/>
+      <stop offset="0.48" stop-color="#a95410"/>
+      <stop offset="0.8" stop-color="#fff0ad"/>
+      <stop offset="1" stop-color="#b65f13"/>
+    </linearGradient>
+    <radialGradient id="spark" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff8ce"/>
+      <stop offset="0.35" stop-color="#ffd36a"/>
+      <stop offset="1" stop-color="#ffd36a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <path d="M0 286 C155 206 268 122 384 0" fill="none" stroke="url(#gold)" stroke-width="20" opacity=".65"/>
+  <path d="M0 316 C194 222 345 120 495 0" fill="none" stroke="#fff0ad" stroke-width="3" opacity=".48"/>
+  <path d="M0 232 C124 172 218 92 298 0" fill="none" stroke="#9b4b0d" stroke-width="8" opacity=".52"/>
+  <path d="M1040 0 C1068 54 1047 113 989 178 C948 225 936 277 965 320 L1200 320 L1200 0 Z" fill="url(#gold)" opacity=".82"/>
+  <path d="M1087 0 C1113 67 1089 130 1028 192 C991 230 981 275 1008 320" fill="none" stroke="#fff2be" stroke-width="10" opacity=".62"/>
+
+  <g opacity=".86">
+    <path d="M425 37 C525 88 681 77 800 27" fill="none" stroke="#fff1b6" stroke-width="5" opacity=".42"/>
+    <path d="M398 73 C536 125 700 113 850 51" fill="none" stroke="#ffb44b" stroke-width="2" opacity=".55"/>
+    <path d="M258 286 C420 210 690 197 980 253" fill="none" stroke="#ffcf65" stroke-width="3" opacity=".33"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle cx="1035" cy="56" r="44" fill="url(#spark)"/>
+    <circle cx="344" cy="78" r="24" fill="url(#spark)"/>
+    <circle cx="98" cy="210" r="18" fill="url(#spark)"/>
+    <circle cx="770" cy="38" r="22" fill="url(#spark)"/>
+  </g>
+
+  <g transform="translate(535 60)" filter="url(#glow)">
+    <path d="M170 0 L190 68 L261 68 L203 109 L225 178 L170 136 L114 178 L136 109 L79 68 L149 68 Z" fill="none" stroke="#fff4bc" stroke-width="9" stroke-linejoin="round"/>
+    <text x="0" y="69" fill="#ffe79b" font-family="Arial Black, Arial, sans-serif" font-size="56" font-weight="900">Star</text>
+    <text x="0" y="121" fill="#ffe79b" font-family="Arial Black, Arial, sans-serif" font-size="50" font-weight="900">Academy</text>
+    <text x="5" y="154" fill="#fff6d3" font-family="Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="3">TOUR 2026</text>
+  </g>
+
+  <g fill="#ffe8a3" opacity=".9">
+    <path d="M430 42 l5 15 16 5 -16 5 -5 15 -5 -15 -16 -5 16 -5z"/>
+    <path d="M912 74 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4z"/>
+    <path d="M782 208 l5 15 15 5 -15 5 -5 15 -5 -15 -15 -5 15 -5z"/>
+    <path d="M107 95 l3 9 10 3 -10 3 -3 10 -3 -10 -10 -3 10 -3z"/>
+  </g>
+</svg>
